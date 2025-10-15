@@ -158,5 +158,3 @@ with tab2:
         ax.set_title("Gráfica de la Tangente")
         ax.grid(True)
         st.pyplot(fig)
-
-  streamlit run app.py
