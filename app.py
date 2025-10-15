@@ -20,7 +20,7 @@ with tab1:
     if figura == "Círculo":
         st.subheader("Círculo")
         radio = st.number_input("Ingresa el radio (r):", min_value=0.1, value=5.0, step=0.1)
-        
+        #Figura círculo
         area_circulo = np.pi * radio**2
         perimetro_circulo = 2 * np.pi * radio
 
@@ -36,7 +36,7 @@ with tab1:
         ax.set_ylim(-radio - 1, radio + 1)
         plt.title("Visualización del Círculo")
         st.pyplot(fig)
-
+#figura triángulo
     elif figura == "Triángulo":
         st.subheader("Triángulo (Rectángulo)")
         base = st.number_input("Ingresa la base (b):", min_value=0.1, value=10.0, step=0.1)
@@ -59,7 +59,7 @@ with tab1:
         ax.set_xlim(-1, base + 1)
         plt.title("Visualización del Triángulo")
         st.pyplot(fig)
-
+#figura rectángulo
     elif figura == "Rectángulo":
         st.subheader("Rectángulo")
         base_rect = st.number_input("Ingresa la base (b):", min_value=0.1, value=8.0, step=0.1)
@@ -80,7 +80,7 @@ with tab1:
         ax.set_ylim(-1, altura_rect + 1)
         plt.title("Visualización del Rectángulo")
         st.pyplot(fig)
-
+#figura cuadrado
     elif figura == "Cuadrado":
         st.subheader("Cuadrado")
         lado = st.number_input("Ingresa la longitud del lado (l):", min_value=0.1, value=6.0, step=0.1)
@@ -101,23 +101,18 @@ with tab1:
         plt.title("Visualización del Cuadrado")
         st.pyplot(fig)
 
-# -----------------------------------------------------------
-# 4. CÓDIGO DE LA SEGUNDA PESTAÑA (Funciones Trigonométricas)
-# -----------------------------------------------------------
+# Código de Funciones Trigonométricas
 with tab2:
     st.header("Graficador de Funciones Trigonométricas")
 
     # Selector para la función trigonométrica
-    funcion = st.selectbox(
-        "Selecciona una función:",
-        ["Seno", "Coseno", "Tangente"]
-    )
+    funcion = st.selectbox("Selecciona una función:",["Seno", "Coseno", "Tangente"])
 
-    # Sliders para controlar amplitud y rango
+    # Amplitud y rango
     amplitud = st.slider("Amplitud", 0.1, 5.0, 1.0)
     rango_max = st.slider("Rango (en múltiplos de π)", 1, 10, 2)
     
-    # Generar los valores de x en el rango especificado
+    # Generar los valores de x
     x = np.linspace(0, rango_max * np.pi, 500)
     
     if funcion == "Seno":
