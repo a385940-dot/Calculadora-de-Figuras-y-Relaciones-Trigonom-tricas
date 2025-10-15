@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # Titulos
 st.title("Calculadora de Figuras y Relaciones Trigonométricas")
-st.subtitle("Alexa Gabriela Torres-385940")
+st.sidebar.write("Alexa Gabriela Torres-385940")
 tab1, tab2 = st.tabs(["Calculadora Geométrica", "Funciones Trigonométricas"])
 
 # Códgio para Calculaora geométrica
