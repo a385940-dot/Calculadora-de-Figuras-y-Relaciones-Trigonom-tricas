@@ -8,7 +8,6 @@ st.title("Calculadora de Figuras y Relaciones Trigonométricas")
 
 # Crear pestañas para separar las secciones de la aplicación
 tab1, tab2 = st.tabs(["Calculadora Geométrica", "Funciones Trigonométricas"])
-
 # --- Pestaña de Calculadora Geométrica (Parte 1 y 2) ---
 with tab1:
     st.header("Calculadora de Áreas y Perímetros")
@@ -118,7 +117,6 @@ with tab1:
         ax.set_ylim(-1, lado + 1)
         plt.title("Visualización del Cuadrado")
         st.pyplot(fig)
-
   # --- Pestaña de Funciones Trigonométricas (Parte 3) ---
 with tab2:
     st.header("Graficador de Funciones Trigonométricas")
