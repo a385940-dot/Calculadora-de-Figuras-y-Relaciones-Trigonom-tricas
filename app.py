@@ -1,29 +1,19 @@
-# -----------------------------------------------------------
-# 1. IMPORTACIONES (El inicio de tu receta)
-# -----------------------------------------------------------
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-# -----------------------------------------------------------
-# 2. TÍTULO Y PESTAÑAS (La estructura principal)
-# -----------------------------------------------------------
+# Titulos
 st.title("Calculadora de Figuras y Relaciones Trigonométricas")
+st.subtitle("Alexa Gabriela Torres-385940")
 tab1, tab2 = st.tabs(["Calculadora Geométrica", "Funciones Trigonométricas"])
 
-# -----------------------------------------------------------
-# 3. CÓDIGO DE LA PRIMERA PESTAÑA (Calculadora Geométrica)
-# -----------------------------------------------------------
+# Códgio para Calculaora geométrica
 with tab1:
     st.header("Calculadora de Áreas y Perímetros")
-
     # Selector para elegir la figura geométrica
-    figura = st.selectbox(
-        "Selecciona una figura geométrica:",
-        ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"]
-    )
-
-    # Widget para seleccionar el color de la figura
+    figura = st.selectbox("Selecciona una figura geométrica:",["Círculo", "Triángulo", "Rectángulo", "Cuadrado"])
+    
+    # Seleccionar el color de la figura
     color = st.color_picker("Elige un color para la figura", "#00f900")
 
     if figura == "Círculo":
